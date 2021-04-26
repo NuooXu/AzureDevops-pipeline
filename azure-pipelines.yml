@@ -12,12 +12,11 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-
-- task: TerraformCLI@0
 - task: DownloadSecureFile@1
   name: publickey
   inputs:
     secureFile: 'azure_rsa.pub'
+- task: TerraformCLI@0
   inputs:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
@@ -25,9 +24,9 @@ steps:
     backendType: 'azurerm'
     backendServiceArm: 'azurer-resource-manager-service-connection'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'terraform-backend-rg'
+    backendAzureRmResourceGroupName: 'terraform-test'
     backendAzureRmResourceGroupLocation: 'westeurope'
-    backendAzureRmStorageAccountName: 'storageTerraform'
-    backendAzureRmContainerName: 'storageTerraformK8s'
-    backendAzureRmKey: 'k8s-dev.tfstate'
+    backendAzureRmStorageAccountName: 'storageTerrafomTest'
+    backendAzureRmContainerName: 'k8s-terraform-test'
+    backendAzureRmKey: 'dev.tfstate'
     allowTelemetryCollection: true
