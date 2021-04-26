@@ -24,9 +24,9 @@ steps:
     backendType: 'azurerm'
     backendServiceArm: 'azurer-resource-manager-service-connection'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'terraform-test'
+    backendAzureRmResourceGroupName: 'terraform-test-rg'
     backendAzureRmResourceGroupLocation: 'westeurope'
-    backendAzureRmStorageAccountName: 'storageTerrafomTest'
-    backendAzureRmContainerName: 'k8s-terraform-test'
+    backendAzureRmStorageAccountName: 'storageterraformtest'
+    backendAzureRmContainerName: 'k8sterraformtest'
     backendAzureRmKey: 'dev.tfstate'
     allowTelemetryCollection: true
