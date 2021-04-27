@@ -25,11 +25,11 @@ steps:
     backendType: 'azurerm'
     backendServiceArm: 'azurer-resource-manager-service-connection'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'terraform-dev-rg'
+    backendAzureRmResourceGroupName: 'terraform-dev-rg1'
     backendAzureRmResourceGroupLocation: 'westeurope'
-    backendAzureRmStorageAccountName: 'storageterraformtest0505'
-    backendAzureRmContainerName: 'k8sterraformtest'
-    backendAzureRmKey: 'dev.tfstate'
+    backendAzureRmStorageAccountName: 'storageterraformtest0506'
+    backendAzureRmContainerName: 'k8sterraformdev'
+    backendAzureRmKey: 'dev1.tfstate'
     allowTelemetryCollection: true
 
 - task: TerraformCLI@0
